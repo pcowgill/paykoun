@@ -1,14 +1,20 @@
 
-var firebase = require('firebase');
+var Firebase = require('firebase');
+var Paykoun = require('paykoun');
 
-var Worker1 = Paykoun.createWorker('name', {
+
+var WorkerNameOne = require('./lib/workers/WorkerNameOne')();
+
+
+Paykoun.createWorker('name', {
   work: function(){
     firebase.do();
   }
 );
 
 PaykounHelper.testWorker = function(workerDef, job, done) {
-  var worker = Worker1.instantiate();
+  //var worker = Worker1.instantiate();
+  var worker = new Worker('name');
 
   worker.doWork(job, done);
 };

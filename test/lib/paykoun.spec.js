@@ -7,7 +7,7 @@ var chai = require('chai'); // assertion library
 var expect = chai.expect;
 var should = chai.should;
 var sinon = require('sinon');
-var sinonChai = require("sinon-chai");
+var sinonChai = require('sinon-chai');
 chai.use(sinonChai);
 
 var Paykoun = require(paykounPath);
@@ -19,7 +19,7 @@ describe('Paykoun', function(){
 
   beforeEach(function(){
     queueMgr = new WorkQueueMgr({
-      component: "Comp1"
+      component: 'Comp1'
     });
   })
 
@@ -40,7 +40,7 @@ describe('Paykoun', function(){
       });
 
       context.registerWorker({
-        name: "Worker1",
+        name: 'Worker1',
         setWorkQueue: setWorkQueueSpy
       });
 
